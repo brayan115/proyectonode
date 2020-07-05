@@ -1,6 +1,8 @@
 
 //Modulos requeridos
+
 const express =require('express');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
@@ -14,13 +16,11 @@ const session = require('express-session');
 
 //Conexion a la base de datos
 //17 importa el url del archvo database.js
-const {url} =require('./config/database');
-mongoose.connect(url,{
-    useMongoClient: true
-});
+//const {url} =require('./config/database');
+mongoose.connect("mongodb://localhost/proyectonode",{useNewUrlParser: true, useUnifiedTopology: true} );
 
 //configuracion del passport antes de inicializar
-require('./config.passport')(passport);
+require('./config/passport')(passport);
 //Configuracion
 app.set('port', process.env.PORT || 3000);
 //Vistas
@@ -37,7 +37,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-app.use(passport.initialize);
+app.use(passport.initialize());
     //para guardar la informacion del usuario logueado
 app.use(passport.session());
 app.use(flash());
