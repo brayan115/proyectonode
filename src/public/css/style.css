@@ -9,3 +9,16 @@
     background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+  .nav__container--navigation{
+    height:inherit;
+    display:inherit;
+    align-items:inherit
+  }
+  .btn{
+    background-color:black;
+    color: white;
+    padding:12px 35px;
+    cursor:pointer;
+    border-radius:20px;
+    text-decoration:none;
+  }
