@@ -1,0 +1,130 @@
+:root{
+    --color-dark: #15181f;
+    --color-dark-x: #2d343f;
+    --color-dark-xx: #1f232b;
+    --color-light: #ffffff;
+    --color-grey: #f5f6f8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-light);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+    background: #BEBEBE;
+}
+
+.bg-light{
+    background-color: var(--color-light)!important;
+}
+
+.bg-dark{
+    background-color: var(--color-dark)!important;
+}
+
+.bg-arial{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif!important;
+}
+
+.p-6 {
+    padding: 4rem 7rem;
+}
+
+.contact-box {
+    padding: 3rem;
+}
+
+.btn{
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    min-width: 10rem;
+}
+
+.btn-outline-dark{
+    border:2px solid var(--color-dark-xx);
+}
+
+.form-control {
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: .4rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.register-bg {
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    opacity: 55%;
+}
+
+.texto{
+    text-align: justify;
+}
+
+.testimonial {
+    bottom: 5px;
+}
+
+a:hover {
+    color: #ffffff !important;
+}
+
+@media (max-width: 840px) {
+    .p-6 {
+        padding: 2rem;
+    }
+
+    .contact-box {
+        padding: 0;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 840px) { 
+    .register-bg {
+        min-height: 55vh;
+    }
+}
+
+#contenedor_carga{
+    background-color: rgba(121, 121, 121, 0.95);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease ;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 16px solid #ffffff;
+    border-top-color: #1f232b;
+    border-top-style: solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5 linear infinite;
+}
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
