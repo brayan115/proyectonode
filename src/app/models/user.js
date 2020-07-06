@@ -3,24 +3,39 @@ const bcrypt = require('bcrypt-nodejs');
 
 const userSchema = new mongoose.Schema({
   local: {
+    nombre:String,
+    apellido:String,
+    dni:String,
+    edad:Number,
+    celular:Number,
     email: String,
     password: String
+
   },
   facebook: {
-    id: String,
-    token: String,
+    nombre:String,
+    apellido:String,
+    dni:String,
+    edad:Number,
+    celular:Number,
     email: String,
     password: String
   },
   twitter: {
-    id: String,
-    token: String,
+    nombre:String,
+    apellido:String,
+    dni:String,
+    edad:Number,
+    celular:Number,
     email: String,
     password: String
   },
   google: {
-    id: String,
-    token: String,
+    nombre:String,
+    apellido:String,
+    dni:String,
+    edad:Number,
+    celular:Number,
     email: String,
     password: String
   }
