@@ -13,7 +13,7 @@ body {
     background-color: var(--color-light);
     color: var(--color-light);
     letter-spacing: .05rem;
-    background: #BEBEBE;
+    background: black;
 }
 
 .bg-light{
@@ -95,7 +95,7 @@ a:hover {
 }
 
 #contenedor_carga{
-    background-color: rgba(121, 121, 121, 0.95);
+    background-color: rgba(0, 0, 121, 0.95);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -124,7 +124,3 @@ a:hover {
     animation: girar 1.5 linear infinite;
 }
 
-@keyframes girar {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}

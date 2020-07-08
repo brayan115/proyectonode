@@ -4,61 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos_register.css">-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" >
+     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" >
+    
 </head>
-<body class="signup">
-    <div class="container">
-      <div class="col-sm-6 mx-auto">
-        <div class="card mt-5">
-          <div class="card-body">
-            <!-- messages -->
-            <h1 class="text-center">
-              <span class="fa fa-sign-in"></span> Signup
-            </h1>
-            <% if (message.length > 0) { %>
-              <div class="alert alert-danger">
-                <%= message %>
-              </div>
-            <% } %>
+<body>
 
-            <!-- form -->
-			<form action="/signup" method="post">
-				<div class="form-group col-md-6">
-					<label class="font-weidt-bold bg-arial">Nombre: <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" minlength="4" maxlength="16" placeholder="Tu primer nombre" name="nombre" required="">
-				</div>
-				<div class="form-group col-md-6">
-					<label class="font-weidt-bold bg-arial">Apellido: <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" minlength="4" maxlength="16" placeholder="Tu primer apellido" name="apellido" required="">
-				</div>
-				<div class="form-group col-md-4">
-					<label class="font-weidt-bold bg-arial">Dni: <span class="text-danger">*</span></label>
-					<input type="text" class="form-control" minlength="8" maxlength="8" placeholder="Tu dni" name="dni" required="">
-				</div>
-				<div class="form-group col-md-4">
-					<label class="font-weidt-bold bg-arial">Edad: <span class="text-danger">*</span></label>
-					<input type="number" class="form-control" min="17" max="60" placeholder="Tu edad" name="edad" required="">
-				</div>
-				<div class="form-group col-md-4">
-					<label class="font-weidt-bold bg-arial">Num. Celular: <span class="text-danger">*</span></label>
-					<input type="tel" class="form-control" minlength="9" maxlength="9" placeholder="Tu celular" name="celular" required="">
-				</div>
-			</div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control">
+  <section class="contact-box">	
+    <div class="row no-gutters bg-dark">
+      <div class="col-xl-5 col-lg-12 register-bg texto">
+
+        <div class="position-absolute testimonial p-4">
+          <h1 class="font-weight-bold text-light">GYM FLEX</h1>
+          <p class="lead text-light">El mejor gimnasio que tu billetera puede pagar.</p>
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-12 d-flex">
+        <div class="container align-self-center p-6">
+          <h1 class="font-weight-bold mb-3 texto">¡ Crea tu cuenta GRATIS !</h1>
+          <div class="form-group">
+            <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-google lead align-middle mr-2"></i>Google</button>
+            <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i>Facebook</button>
+            <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-twitter lead align-middle mr-2"></i>Twitter</button>
+            <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-twitch lead align-middle mr-2"></i>Twitch</button>
+          </div>
+          <p class="text-muted mb-5 texto">Ingresa la siguiente información para registrarte.</p>
+          <% if (message.length > 0) { %>
+          <div class="alert alert-danger">
+            <%= message %>
+          </div>
+          <% } %>
+          <form action="/signup" method="post">
+            <div class="form-row mb-3">
+              <div class="form-group col-md-6">
+                <label class="font-weidt-bold bg-arial">Nombre: <span class="text-danger">*</span></label>
+                <input type="text" class="form-control"  maxlength="16" placeholder="Tu primer nombre"name="nombre" required="">
               </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="form-control">
+              <div class="form-group col-md-6">
+                <label class="font-weidt-bold bg-arial">Apellido: <span class="text-danger">*</span></label>
+                <input type="text" class="form-control"  maxlength="16" placeholder="Tu primer apellido" name="apellido" required="">
               </div>
+              <div class="form-group col-md-4">
+                <label class="font-weidt-bold bg-arial">Dni: <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" minlength="8" maxlength="8" placeholder="Tu dni" name="dni" required="">
+              </div>
+              <div class="form-group col-md-4">
+                <label class="font-weidt-bold bg-arial">Edad: <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" min="17" max="60" placeholder="Tu edad" name="edad" required="">
+              </div>
+              <div class="form-group col-md-4">
+                <label class="font-weidt-bold bg-arial">Num. Celular: <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" minlength="9" maxlength="9" placeholder="Tu celular" name="celular" required="">
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label class="font-weidt-bold bg-arial">Correo Electrónico: <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" minlength="8" maxlength="40" placeholder="Ingresa tu correo electrónico" name="email" required="">
+            </div>
+            <div class="form-group mb-3">
+              <label class="font-weidt-bold bg-arial">Contraseña: <span class="text-danger">*</span></label>
+              <input type="password"  class="form-control" minlength="8" maxlength="16" placeholder="Ingresa tu contraseña" name="password" required="">
+            </div>
+            <div class="form-group mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" required="" checked="">
+                <label class="form-check-label text-muted texto">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los términos y condiciones.</label>
+              </div>
+            </div>
               <input type="submit" class="btn btn-dark btn-lg">
             </form>
 
             <hr>
-            <div class="text-center">s
+            <div class="text-center">
               <p>Already have an account? <a href="/login">Login</a></p>
               <p>Or go <a href="/">home</a>.</p>
             </div>
